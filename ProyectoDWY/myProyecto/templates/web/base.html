@@ -1,0 +1,83 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Lavado de Autos</title>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+
+
+    <!-- Contenido de La pagina-->
+
+    {% block contenido %}
+
+    {% endblock contenido %}
+
+
+    <!--footer de la pagina-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-columna">
+                    <h3>Horario de atencion</h3>
+                    <p>El horario de atencion de la compañia esta dentro del rango 8:00 y 23:00 de los dias lunes a viernes</p>
+                </div>
+
+                <div class="footer-columna">
+                    <h3>Contacto</h3>
+                    <div class="row2">
+                        <img src="{% static 'img/house.png'%}">
+                        <label>La Primavera 3834, La Pintana, Región Metropolitana</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="{% static 'img/smartphone.png'%}">
+                        <label>+56 9 1234 1234</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="{% static 'img/contact.png'%}">
+                        <label>LavadoMiguel@gmail.com</label>
+                    </div>
+                </div>
+
+                <div class="footer-columna">
+                    <h3>Mas informacion de la compañia</h3>
+                    <p>Esta compañia se especializa en la limpieza de autos para todo publico que desee nuestro servicio.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy-redes">
+            <div class="main-copy-redes">
+                <div class="footer-copy">
+                    © 2020 Todos los Derechos Reservados | Sistema desarrollado por : <a href="">Team 1 Software</a>
+                </div>
+                <div class="footer-redes">
+                    <div class="row">
+                        <img src="{% static 'img/facebook.png' %}">
+                        <label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <img src="{% static 'img/twitter.png' %}">
+                        <label>Siguenos en Twitter</label>
+                    </div>
+                    <div class="row">
+                        <img src="{% static 'img/instagram.png' %}">
+                        <label>Siguenos en Instagram</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

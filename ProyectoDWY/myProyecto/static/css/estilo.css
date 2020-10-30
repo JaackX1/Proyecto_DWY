@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 62, 62, 0.89);
+}
+
+.navbar {
+    float: left;
+    padding-left: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.navbar-dark .navbar-brand {
+    color: #dcdde1;
+}
+
+.nav-item {
+    top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    border-radius: 6px;
+    margin-right: auto;
+    background: #dcdde1;
+    color: #262626;
+}
+
+.main {
+    position: relative;
+    background: url('../img/wallpaper.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 220px 0 200px;
+}
+
+.main h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.6em;
+    color: #dcdde1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main p {
+    margin-top: 1em;
+    padding: 0;
+    font-size: 1em;
+    color: #dcdde1;
+}
+
+.main .btn {
+    background: #937171;
+    color: #fff;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.main .container {
+    background-color: rgba(124, 12, 12, 0.781);
+    max-width: 100%;
+    transform: translateY(80%);
+    opacity: 76%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+@media(max-width:768px) {
+    .main {
+        padding: 200px 0;
+    }
+    .main h2 {
+        font-size: 2em;
+    }
+}

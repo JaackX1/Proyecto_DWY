@@ -1,0 +1,125 @@
+{% extends "web/base.html" %} {% load static %} {% block contenido %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/sucursal.css'%}">
+</head>
+
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--Navegador-->
+    <section id="header">
+        <div class="Container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="Container">
+                    <a href="#" class="navbar-brand"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> 
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="nav-logo" style="color: white;font-size: 35px;">
+                            <p> Don Miguel</p>
+                        </div>
+                        <div class="nav-User">
+                        {% if user.is_authenticated %}
+                        <div class="nav-user-color" style="color: white;font-size: 18px; padding-left: 8px; line-height: 8px;background-color:rgba(175, 45, 45, 0.89);padding-top: 10px;padding-right: 6px;padding-bottom: 1px;border-radius: 5px;">
+                            <p>Bienvenido: </p>
+                            <p>{{user.first_name}} {{user.last_name}}</p>
+                        </div>
+
+                        {% else %}
+                        <div class="nav-user-color">
+                        </div>
+
+                        {% endif %}
+                        </div>
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item ">
+                                <a href="{% url 'INDEX' %}" class="nav-link">Inicio</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'MISION' %}" class="nav-link">Nuestra Mision</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a href="{% url 'SUCURSALES' %}" class="nav-link">Sucursales</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'GALERIA' %}" class="nav-link">Galeria</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'FORMULARIOS' %}" class="nav-link">Formularios</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li class="nav-item ">
+                                <a href="{% url 'LOGOUT' %}" class="nav-link">Cerrar Sesion</a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item ">
+                                <a href="{% url 'LOGIN' %}" class="nav-link">Login</a>
+
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- Contenido de La pagina-->
+    <section class="main">
+        <div class="container">
+            <div class="row">
+
+                <h2>Sucursal</h2>
+
+                <div class="Sucursal">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d830.855094773275!2d-70.60925597078185!3d-33.5943955987958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d768bbfab6ab%3A0x28055b08e6c52cd7!2sLa%20Primavera%203834%2C%20La%20Pintana%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1599942345721!5m2!1ses!2scl"
+                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <div class="Descripcion">
+
+
+                    <div class="Imagen-info">
+                        <h2>Imagen de Referencia</h2>
+                        <div class="imagenSucursal">
+                            <img src="{% static 'img/S-Img.PNG'%}" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="Info">
+                        <h2>Mas Informacion</h2>
+                        <div class="text-Mas-Informacion">
+                            <h4>
+                                Nuestra sucursal se encuentra en una casa, contiene letreros asociados a nuestro servicio de lavado, esto se encuentra en La Primavera 3834, frente al Basural El Castillo, con Caletera acceso sur.
+                                <br> Para más información nuestro numero de contacto es: +56 9 1234 1234
+                            </h4>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+{% endblock contenido %} 

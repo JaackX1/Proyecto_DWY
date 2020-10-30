@@ -1,0 +1,237 @@
+{% extends "web/base.html" %} {% load static %} {% block contenido %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/cartas.css'%}">
+</head>
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--Navegador-->
+    <section id="header">
+        <div class="Container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="Container">
+                    <a href="#" class="navbar-brand"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> 
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="nav-logo" style="color: white;font-size: 35px;">
+                            <p> Don Miguel</p>
+                        </div>
+                        <div class="nav-User">
+                        {% if user.is_authenticated %}
+                        <div class="nav-user-color" style="color: white;font-size: 18px; padding-left: 8px; line-height: 8px;background-color:rgba(175, 45, 45, 0.89);padding-top: 10px;padding-right: 6px;padding-bottom: 1px;border-radius: 5px;">
+                            <p>Bienvenido: </p>
+                            <p>{{user.first_name}} {{user.last_name}}</p>
+                        </div>
+
+                        {% else %}
+                        <div class="nav-user-color">
+                        </div>
+
+                        {% endif %}
+                        </div>
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item active">
+                                <a href="{% url 'INDEX' %}" class="nav-link">Inicio</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'MISION' %}" class="nav-link">Nuestra Mision</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'SUCURSALES' %}" class="nav-link">Sucursales</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'GALERIA' %}" class="nav-link">Galeria</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'FORMULARIOS' %}" class="nav-link">Formularios</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li class="nav-item ">
+                                <a href="{% url 'LOGOUT' %}" class="nav-link">Cerrar Sesion</a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item ">
+                                <a href="{% url 'LOGIN' %}" class="nav-link">Login</a>
+
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contenido de La pagina-->
+    <section class="main">
+        <div class="cards">
+
+
+            <!--Carta 1-->
+            <div class="card">
+
+                <img src="{% static 'img/lavamotor.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Lavado de Motor</h4>
+                    <p>Con este servicio, se le hara un completo lavado al motor de su vehiculo</p>
+                    <br>
+                    <br>
+
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 15.990
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Carta 2-->
+            <div class="card">
+
+                <img src="{% static 'img/lavafullCerado.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Lavado Full + Cera Carnauba</h4>
+                    <p>Con este servicio, se le hara limpieza exterior y interior sumandole una cera carnauba a su vehiculo</p>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 33.990
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Carta 3-->
+            <div class="card">
+
+                <img src="{% static 'img/lavadoExterior.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Lavado Exterior</h4>
+                    <p>Con este servicio, solo se le hara un lavado exterior (incluye vidrios y solo retrovisores exteriores)</p>
+                    <br>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 12.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+            <!--Carta 4-->
+            <div class="card">
+
+                <img src="{% static 'img/lavaInterior.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Limpieza Interior</h4>
+                    <p>Con este servicio, solo se le hara un lavado interior (Incluye retrovisor exteriores e interior)</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 18.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+            <!--Carta 5-->
+            <div class="card">
+
+                <img src="{% static 'img/pulir-coche.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Pulido de Carrocería</h4>
+                    <p>Con este servicio, se le hara un pulido brillante al vehiculo</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 24.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+            <!--Carta 6-->
+            <div class="card">
+
+                <img src="{% static 'img/InteriorExterior.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Lavado exterior + interior</h4>
+                    <p>Con este servicio, se le hara un lavado exterior y interior del vehiculo</p>
+                    <br>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 27.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+            <!--Carta 7-->
+            <div class="card">
+
+                <img src="{% static 'img/descontaminado-de-pintura.jpg'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Descontaminado de Pintura</h4>
+                    <p>Con este servicio, se le descontaminara la pintura, sacando manchas e impurezas</p>
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 10.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+            <!--Carta 8-->
+            <div class="card">
+
+                <img src="{% static 'img/pulidoFocos.png'%}" alt="" class="card_image">
+                <div class="card_content">
+                    <h4>Pulido de Focos</h4>
+                    <p>Con este servicio, se le hara un pulido eliminando la opacidad que con el tiempo aparece en los focos</p>
+                    <br>
+
+                </div>
+                <div class="card_info">
+                    <div>
+                        <img src="{% static 'img/money.png'%}" alt="" style="max-width: 19px; max-height: 19px;"> 9.000
+                    </div>
+                    <div>
+                        <a href="usuario.html" class="card_link">Pedir Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+{% endblock contenido %} 

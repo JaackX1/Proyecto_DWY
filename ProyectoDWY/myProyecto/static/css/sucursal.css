@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+#header {
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 62, 62, 0.89);
+}
+
+.navbar {
+    float: left;
+    padding-left: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.navbar-dark .navbar-brand {
+    color: #dcdde1;
+}
+
+.nav-item {
+    top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    border-radius: 6px;
+    margin-right: auto;
+    background: #dcdde1;
+    color: #262626;
+}
+
+.Sucursal {
+    background-color: rgb(160, 0, 0);
+    width: 100%;
+    height: 450px;
+    padding: 10px;
+    border: solid rgb(139, 139, 139);
+    box-shadow: 5px 10px;
+}
+
+.Descripcion {
+    background-color: rgba(139, 139, 139, 0.842);
+    width: 100%;
+    height: 350px;
+    box-shadow: 5px 10px;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    border-top-color: black;
+    border-width: 5px;
+}
+
+.Imagen-info {
+    width: 49%;
+    height: 340px;
+    float: left;
+    padding: 10px;
+    border-style: solid;
+    border-left: black;
+    border-top: black;
+    border-bottom: black;
+}
+
+.Info {
+    width: 49%;
+    height: 340px;
+    float: left;
+    padding: 10px;
+    border-style: solid;
+    border-right: black;
+    border-top: black;
+    border-bottom: black;
+}
+
+.imagenSucursal {
+    width: 100%;
+    height: 85%;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 5px;
+}
+
+
+/**/
+
+.main {
+    flex: 70%;
+    background-color: black;
+    background-image: url('../img/wallpaper.jpg');
+    background-position: center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    border: solid black;
+    position: relative;
+    min-height: 100vh;
+    padding: 220px 0 200px;
+}
+
+.main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row h2 {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    /*
+    .imagenSucursal {
+        width: 100%;
+        height: 100px;
+    }*/
+    .Descripcion {
+        height: 400px;
+    }
+    .Imagen-info {
+        height: 390px;
+    }
+    .imagenSucursal {
+        height: 290px;
+    }
+    .Info {
+        height: 390px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Descripcion {
+        height: 700px;
+    }
+    .Imagen-info {
+        width: 100%;
+        height: 350px;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: none;
+    }
+    .Info {
+        width: 100%;
+        height: 290px;
+        float: left;
+        padding: 3px;
+        border-style: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Descripcion {
+        height: 700px;
+    }
+    .Imagen-info {
+        width: 100%;
+        height: 350px;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: none;
+    }
+    .Info {
+        width: 100%;
+        height: 290px;
+        float: left;
+        padding: 3px;
+        border-style: none;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .Descripcion {
+        height: 780px;
+    }
+    .Imagen-info {
+        width: 100%;
+        height: 400px;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: none;
+    }
+    .Info {
+        width: 100%;
+        height: 370px;
+        float: left;
+        padding: 3px;
+        border-style: none;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .Descripcion {
+        height: 880px;
+    }
+    .Imagen-info {
+        width: 100%;
+        height: 400px;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-style: none;
+    }
+    .Info {
+        width: 100%;
+        height: 470px;
+        float: left;
+        padding: 3px;
+        border-style: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .container {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        width: 100%;
+    }
+    .Sucursal {
+        background-color: rgb(160, 0, 0);
+        width: 100%;
+        height: 450px;
+        padding: 0;
+        border: solid rgb(139, 139, 139);
+        box-shadow: 5px 10px;
+    }
+}

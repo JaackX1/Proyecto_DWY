@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+#header {
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 62, 62, 0.89);
+}
+
+.navbar {
+    float: left;
+    padding-left: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.navbar-dark .navbar-brand {
+    color: #dcdde1;
+}
+
+.nav-item {
+    top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    border-radius: 6px;
+    margin-right: auto;
+    background: #dcdde1;
+    color: #262626;
+}
+
+
+/*Cuadro VER INSUMOS - TABLA*/
+
+.cuadro-form {
+    background-color: rgb(160, 0, 0);
+    width: 100%;
+    height: 420px;
+    padding: 10px;
+    border: solid rgb(139, 139, 139);
+    box-shadow: 5px 10px;
+    overflow: scroll;
+}
+
+.mensajeI h2 {
+    height: 70px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px auto 0;
+    font-size: 1rem;
+    color: #4a788b;
+    border-radius: 10px;
+}
+
+table thead {
+    background-color: #fcd9d9;
+}
+
+table tbody {
+    background-color: #f0f8fc;
+}
+
+table th,
+table td {
+    border: 1px solid #ff6f6f;
+    padding: 5px 10px;
+}
+
+.title {
+    padding-left: 30%;
+}
+
+@media screen and (max-width: 639px) {
+    .title {
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 0%;
+    }
+    .smart-table {
+        width: 100%;
+    }
+    .smart-table thead {
+        display: none;
+    }
+    .smart-table tr,
+    .smart-table td {
+        display: block;
+    }
+    .smart-table tr:not(:last-child) {
+        border-bottom: 0.4pc solid #c35c5c;
+    }
+    .smart-table td {
+        padding-left: 54%;
+        position: relative;
+    }
+    .smart-table td:before {
+        position: absolute;
+        padding: 5px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 45%;
+        content: attr(data-col-title);
+        font-weight: bold;
+        background-color: #f3f6fa;
+    }
+}
+
+.button-add {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.button-add:hover,
+.button-adm:hover {
+    transform: scale(1.05);
+}
+
+.button-adm {
+    padding: 0 4px;
+    border-radius: 3px;
+    border-color: #ff6f6f;
+}
+
+
+/*Desktop*/
+
+@media screen and (max-width: 639px) {
+    .title {
+        text-align: center;
+    }
+    table {
+        width: 80%;
+    }
+}
+
+
+/**/
+
+.main {
+    flex: 70%;
+    background-color: black;
+    background-image: url('../img/wallpaper.jpg');
+    background-position: center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    border: solid black;
+    position: relative;
+    min-height: 100vh;
+    padding: 220px 0 200px;
+}
+
+.main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row h2 {
+    color: white;
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .container {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        width: 100%;
+    }
+    .cuadro-form {
+        background-color: rgb(160, 0, 0);
+        width: 100%;
+        height: 600px;
+        padding: 0;
+        border: solid rgb(139, 139, 139);
+        box-shadow: 5px 10px;
+        overflow: scroll;
+    }
+}
+
+
+/*formulario*/
+
+.formulario-registro {
+    background-color: rgb(104, 0, 0);
+    width: 90%;
+    max-width: 540px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.formulario-titulo {
+    background-color: coral;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid 1px white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contenedor-input {
+    padding: 10px 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tabla-visual {
+    background-color: coral;
+    padding: 10px;
+}
+
+.EYA {
+    color: rgb(16, 12, 223);
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+.col-70 {
+    width: 70%;
+}
+
+.col-50 {
+    width: 48%;
+}
